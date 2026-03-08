@@ -1,0 +1,11 @@
+def generate_patch(threat):
+
+    name = threat['name']
+
+    if threat['cpu_percent'] > 80:
+        return "Terminate process and restrict CPU usage"
+
+    if "unknown" in name.lower():
+        return "Block unknown process execution"
+
+    return "Monitor activity"

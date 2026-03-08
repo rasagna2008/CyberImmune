@@ -1,0 +1,13 @@
+import shutil
+
+def repair_file(backup,target):
+
+    try:
+
+        shutil.copy(backup,target)
+
+        print("System repaired")
+
+    except:
+
+        print("Repair failed")

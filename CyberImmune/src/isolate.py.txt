@@ -1,0 +1,15 @@
+import os
+
+def isolate(threat):
+
+    try:
+
+        pid = threat['pid']
+
+        os.kill(pid,9)
+
+        print("Threat isolated:", pid)
+
+    except:
+
+        print("Isolation failed")

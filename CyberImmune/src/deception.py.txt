@@ -1,0 +1,19 @@
+import socket
+
+def fake_vulnerability():
+
+    server = socket.socket()
+
+    server.bind(("0.0.0.0",8080))
+
+    server.listen(5)
+
+    print("Fake vulnerability active")
+
+    while True:
+
+        client, addr = server.accept()
+
+        print("Attacker connected:", addr)
+
+        client.send(b"Fake admin panel\n")

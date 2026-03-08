@@ -1,0 +1,10 @@
+def detect(processes):
+
+    threats = []
+
+    for p in processes:
+
+        if p['cpu_percent'] > 70:
+            threats.append(p)
+
+    return threats

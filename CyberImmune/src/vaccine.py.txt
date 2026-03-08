@@ -1,0 +1,13 @@
+def simulate_attack():
+
+    threat = {
+
+        "name":"simulated_malware",
+        "cpu_percent":95,
+        "pid":9999
+
+    }
+
+    print("Simulated attack generated")
+
+    return threat

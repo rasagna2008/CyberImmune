@@ -1,0 +1,28 @@
+from monitor import monitor
+from detector import detect
+from isolate import isolate
+from autopatch import generate_patch
+from memory import store_attack
+from vaccine import simulate_attack
+
+while True:
+
+    processes = monitor()
+
+    threats = detect(processes)
+
+    for threat in threats:
+
+        print("Threat detected:", threat)
+
+        isolate(threat)
+
+        patch = generate_patch(threat)
+
+        print("Suggested patch:", patch)
+
+        store_attack(threat)
+
+    simulated = simulate_attack()
+
+    print("Training with simulated attack:", simulated)
